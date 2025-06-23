@@ -1,5 +1,4 @@
 import { useState } from 'react';
-
 // React icons
 import { FaBeer } from 'react-icons/fa';
 import { IoMdLink } from "react-icons/io";
@@ -11,7 +10,7 @@ function Body() {
     function handleClick() {
         setFollowers(followers => followers + 1);
     }
-    
+
     return (
         <div className=" w-full relative top-[77px] px-3">
             <div className="flex justify-between items-center">
@@ -50,6 +49,5 @@ function Body() {
         </div>
     )
 }
-
 
 export default Body
