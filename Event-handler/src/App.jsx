@@ -1,8 +1,11 @@
 import './App.css'
+import Handler from './components/Handler'
 
 function App() {
   return (
-    <div className="w-full h-screen bg-gray-50"></div>
+    <div>
+      <Handler />
+    </div>
   )
 }
 
