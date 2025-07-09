@@ -3,7 +3,7 @@ import Handler from './components/Handler'
 
 function App() {
   return (
-    <div>
+    <div className="App">
       <Handler />
     </div>
   )
