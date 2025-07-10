@@ -2,7 +2,19 @@ import { useState } from 'react';
 
 function App() {
   const [counter, setCounter] = useState(0);
-  const [isPrime, setPrime] = useState(false);
+
+  function checkPrime(num) {
+    if (num <= 1) return false;
+
+    for (let i = 2; i < num; i++) {
+      if (num % i === 0) {
+        return false;
+      }
+    }
+    return true;
+  }
+
+  const isPrime = checkPrime(counter);
 
   return (
     <div>
@@ -16,7 +28,8 @@ function App() {
       <span data-testid="counter">{counter}</span>
       <div>
         <span data-testid="odd-or-even">{counter % 2 === 0 ? "Even" : "Odd"}</span>
-        <span data-testid="is-prime">{isPrime ? "true" : "false"}</span>
+        <br />
+        <span data-testid="is-prime">{isPrime? "true" : "false"}</span>
       </div>
     </div >
   );
