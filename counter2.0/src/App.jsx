@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import './style.css'
 
 function App() {
   const [counter, setCounter] = useState(0);
@@ -17,19 +18,18 @@ function App() {
   const isPrime = checkPrime(counter);
 
   return (
-    <div>
-      <>
+    <div className="counter-body">
+      <div className="btns">
         <button data-testid="minusonebtn" disabled={counter < 1} onClick={() => setCounter(counter - 1)} >-</button>
         <button data-testid="plusonebtn" onClick={() => setCounter(counter + 1)} >+</button>
         <div>
           <button data-testid="resetbtn" onClick={() => setCounter(0)} >reset</button>
         </div>
-      </>
-      <span data-testid="counter">{counter}</span>
+      </div>
+      <span className="counter" data-testid="counter">{counter}</span>
       <div>
-        <span data-testid="odd-or-even">{counter % 2 === 0 ? "Even" : "Odd"}</span>
-        <br />
-        <span data-testid="is-prime">{isPrime? "true" : "false"}</span>
+        <div>The number is: <span data-testid="odd-or-even">{counter % 2 === 0 ? "Even" : "Odd"}</span></div>
+        <div>Prime number: <span data-testid="is-prime">{isPrime? "true" : "false"}</span></div>
       </div>
     </div >
   );
