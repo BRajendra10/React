@@ -27,6 +27,8 @@ export default function StudentForm() {
         onSubmit: value => {
             console.log(value);
             alert(`${value.name} your form is submited.`);
+
+            formik.resetForm();
         }
     });
 
