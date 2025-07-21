@@ -8,3 +8,6 @@ Coutner 2.0
 
 Event Handler
 [Vedio explanation](https://drive.google.com/file/d/1qgt0VC6809m9LYeyotPF4oqV_1hgHxKa/view?usp=sharing)
+
+Comment-review
+[video explanation](https://drive.google.com/file/d/1rLzm0kQW3ZuboXabU46bfkG6dQbcqf-u/view?usp=sharing)
