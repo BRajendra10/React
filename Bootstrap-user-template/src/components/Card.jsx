@@ -17,11 +17,11 @@ export default function Card() {
 
                 <button type="button" className="px-4 py-2 my-4 rounded-5 btn btn-primary fs-6 text-uppercase">I'm available</button>
 
-                <ul className="list-unstyled d-flex gap-3">
-                    <li className="px-2 py-1 rounded-circle social-link"><a className="text-dark" href="#"><FaFacebookF /></a></li>
-                    <li className="px-2 py-1 rounded-circle social-link"><a className="text-dark" href="#"><RiTwitterXLine /></a></li>
-                    <li className="px-2 py-1 rounded-circle social-link"><a className="text-dark" href="#"><FaSquareInstagram /></a></li>
-                    <li className="px-2 py-1 rounded-circle social-link"><a className="text-dark" href="#"><FaGithub /></a></li>
+                <ul className="list-unstyled d-flex items-center gap-3">
+                    <li><a className="px-2 py-1 rounded-circle text-dark social-link" href="#"><FaFacebookF /></a></li>
+                    <li><a className="px-2 py-1 rounded-circle text-dark social-link" href="#"><RiTwitterXLine /></a></li>
+                    <li><a className="px-2 py-1 rounded-circle text-dark social-link" href="#"><FaSquareInstagram /></a></li>
+                    <li><a className="px-2 py-1 rounded-circle text-dark social-link" href="#"><FaGithub /></a></li>
                 </ul>
             </article>
 
