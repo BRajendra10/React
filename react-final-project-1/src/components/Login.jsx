@@ -2,7 +2,7 @@ import React from 'react'
 
 function Login() {
   return (
-    <div>Login</div>
+    <div className="row-span-11 bg-gray-400">Login</div>
   )
 }
 

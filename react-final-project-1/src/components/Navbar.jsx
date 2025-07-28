@@ -3,9 +3,9 @@ import { NavLink } from "react-router-dom";
 
 function Navbar() {
   return (
-    <nav className="w-full h-[60px] bg-gray-200 flex justify-between items-center px-3">
+    <nav className="row-span-1 bg-gray-200 flex justify-between items-center px-3">
         <span className="text-2xl font-bold">CN</span>
-        
+
         <ul className="flex gap-5">
             <li className="text-lg text-stone-700 hover:text-stone-950">
                 <NavLink to={"/"}>Home</NavLink>
