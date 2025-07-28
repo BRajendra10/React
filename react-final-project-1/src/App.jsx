@@ -1,7 +1,11 @@
+import Navbar from "./components/Navbar"
+
 function App() {
 
   return (
-    <div></div>
+    <div className="w-full h-screen">
+      <Navbar />
+    </div>
   )
 }
 
