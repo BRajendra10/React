@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 function Navbar() {
   return (
-    <nav className="row-span-1 bg-gray-200 flex justify-between items-center px-3">
+    <nav className="w-full h-[4rem] bg-gray-300 flex justify-between items-center px-3">
         <span className="text-2xl font-bold">CN</span>
 
         <ul className="flex gap-5">

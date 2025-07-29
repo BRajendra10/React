@@ -4,7 +4,7 @@ import NavRoutes from "./routes/NavRoutes"
 function App() {
 
   return (
-    <div className="w-full h-screen grid grid-rows-12 gap-5">
+    <div className="w-full min-h-screen flex flex-col gap-5">
       <Navbar />
 
       <NavRoutes />
