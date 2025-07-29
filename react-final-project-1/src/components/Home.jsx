@@ -2,7 +2,7 @@ import React from 'react'
 
 function Home() {
   return (
-    <div className="row-span-11 bg-gray-400">
+    <div className="min-h-screen bg-gray-400">
       <h1>Home</h1>
     </div>
   )
