@@ -1,7 +1,6 @@
 import React from 'react'
 
 function ProductCard({ id, title, description, price, image }) {
-
     return (
         <div className="h-[16rem] flex gap-3 bg-stone-50 p-3 shadow-2xl rounded-xl" key={id}>
             <img src={image} alt="product-img" className="w-1/3 h-2/2" />
@@ -12,8 +11,8 @@ function ProductCard({ id, title, description, price, image }) {
                 <span className="font-semibold row-start-8 row-end-9">${price}</span>
 
                 <div className="flex gap-3 row-start-10 row-end-13">
-                    <button className="border px-4 rounded-full hover:bg-stone-950 hover:text-stone-50 duration-700">add to cart</button>
-                    <button className="border px-4 rounded-full hover:bg-stone-950 hover:text-stone-50 duration-700">add to wishlist</button>
+                    <button className="border px-5 rounded-full hover:bg-stone-950 hover:text-stone-50 duration-700">add to cart</button>
+                    <button className="border px-5 rounded-full hover:bg-stone-950 hover:text-stone-50 duration-700">add to wishlist</button>
                 </div>
             </div>
         </div>
