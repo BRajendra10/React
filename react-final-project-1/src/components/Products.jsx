@@ -19,8 +19,6 @@ function Products() {
     }
   }
 
-  console.log(data);
-
   useEffect(() => {
     getData();
   }, [login])
@@ -29,7 +27,7 @@ function Products() {
     <div className="min-h-screen grid grid-cols-12">
       <div className="col-start-2 col-end-12 grid grid-cols-3 gap-4">
         {
-          data.map((el) => <ProductCard key={el.id} title={el.title} description={el.description} price={el.price} image={el.image} />)
+          data.map((el) => <ProductCard id={el.id} title={el.title} description={el.description} price={el.price} image={el.image} />)
         }
       </div>
     </div>
