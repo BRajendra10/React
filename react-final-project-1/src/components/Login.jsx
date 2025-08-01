@@ -1,8 +1,9 @@
 import React from 'react'
 import { useFormik } from 'formik';
-// import { useContext } from 'react'
-import { FormContext } from '../context/FormContext';
 import { object, string } from 'yup';
+import { useContext } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { FormContext } from '../context/FormContext';
 
 const schema = object({
   email: string().required().email(),
@@ -15,20 +16,23 @@ const initialData = {
 }
 
 function Login() {
-  // const { login, handleLogin } = useContext(FormContext);
-
+  const { login, handleLogin } = useContext(FormContext);
+  const navigate = useNavigate();
+  
   const formik = useFormik({
     initialValues: initialData,
     validationSchema: schema,
     onSubmit: value => {
-      console.log(value);
+      if(value){
+        handleLogin(!login);
+        navigate('/products');
+      }
 
       formik.resetForm();
     }
   })
 
   const { values, errors, touched, handleChange, handleSubmit } = formik;
-  console.log(touched);
 
   return (
     <div className="min-h-screen flex justify-center items-center bg-gradient-to-br from-slate-100 to-slate-300 px-4">

@@ -7,12 +7,10 @@ function PrivateRoutes({ children }) {
     const { login } = useContext(FormContext);
 
     if(login) {
-        return <Navigate to={"/products"} />
+        return children
     }else{
-        return <Navigate to={"/login"} />
+        return <Navigate to={"/login"} />;
     }
-
-  return children;
 }
 
 export default PrivateRoutes
