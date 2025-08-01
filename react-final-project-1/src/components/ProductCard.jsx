@@ -1,9 +1,9 @@
 import React from 'react'
 
-function ProductCard({title, description, price, image}) {
+function ProductCard({key, title, description, price, image}) {
 
     return (
-        <div className="h-[16rem] flex gap-3 bg-stone-50 p-3 shadow-2xl rounded-xl">
+        <div className="h-[16rem] flex gap-3 bg-stone-50 p-3 shadow-2xl rounded-xl" key={key}>
             <img src={image} alt="product-img" className="w-1/3 h-2/2" />
 
             <div className="flex flex-col gap-3">

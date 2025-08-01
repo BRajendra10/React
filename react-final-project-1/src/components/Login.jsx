@@ -18,15 +18,17 @@ const initialData = {
 function Login() {
   const { login, handleLogin } = useContext(FormContext);
   const navigate = useNavigate();
-  
+
   const formik = useFormik({
     initialValues: initialData,
     validationSchema: schema,
     onSubmit: value => {
-      if(value){
+      if (value) {
         handleLogin(!login);
         navigate('/products');
       }
+
+      sessionStorage.setItem("login", true);
 
       formik.resetForm();
     }
