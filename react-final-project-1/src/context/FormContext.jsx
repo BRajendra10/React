@@ -8,6 +8,7 @@ export default function FormContextProvider({children}) {
 
     const handleLogin = (value) => {
         setLogin(value);
+        sessionStorage.setItem("login", value);
     }
 
   return (
