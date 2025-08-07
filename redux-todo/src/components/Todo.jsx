@@ -18,6 +18,7 @@ function Todo() {
         setStatus(status);
     }
 
+
     return (
         <div className="w-full h-screen flex flex-col justify-center items-center gap-4">
             <h1 className="text-4xl font-semibold my-8">Todo's</h1>
@@ -33,12 +34,12 @@ function Todo() {
             <ul className="w-[30rem] h-[20rem] border-2 border-orange-200 rounded-lg p-3">
                 {todos.map((el, i) => {
                     return (
-                        <li className='w-full text-lg flex justify-between items-center gap-2' key={i}>
+                        <li className='w-full text-lg flex justify-between items-center' key={i}>
                             <span>{el.title} - {el.status ? "completed" : "incomplete"}</span>
                             <div className="flex gap-2">
-                                <button className="text-xl hover:bg-orange-200 p-2 rounded-full" onClick={() => handleEdit(i, el.title, true)}><FaCheck /></button>
-                                <button className="text-xl hover:bg-orange-200 p-2 rounded-full" onClick={() => dispatch(remove(i))}><MdDelete /></button>
-                                <button className="text-xl hover:bg-orange-200 p-2 rounded-full" onClick={() => handleEdit(i, el.title, false)}><MdModeEditOutline /></button>
+                                <button className="text-stone-500 hover:text-stone-950 p-1 rounded-full" onClick={() => handleEdit(i, el.title, true)}><FaCheck /></button>
+                                <button className="text-stone-500 hover:text-stone-950 p-1 rounded-full" onClick={() => dispatch(remove(i))}><MdDelete /></button>
+                                <button className="text-stone-500 hover:text-stone-950 p-1 rounded-full" onClick={() => handleEdit(i, el.title, false)}><MdModeEditOutline /></button>
                             </div>
                         </li>
                     )
