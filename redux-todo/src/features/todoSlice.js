@@ -1,9 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit'
 
-const initialState = [{
-    title: "create your portfolio",
-    status: false
-}]
+const initialState = JSON.parse(localStorage.getItem("todos")) || [];
 
 const todoSlice = createSlice({
     name: "todo",

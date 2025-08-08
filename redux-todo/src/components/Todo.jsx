@@ -1,9 +1,10 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useSelector, useDispatch } from "react-redux";
 import { add, remove, update } from '../features/todoSlice'
 import { MdModeEditOutline, MdDelete } from "react-icons/md";
 import { FaCheck } from "react-icons/fa6";
+import { useLocalStorage } from '../features/customHook';
 
 function Todo() {
     const dispatch = useDispatch();
@@ -11,6 +12,7 @@ function Todo() {
     const [title, setTile] = useState("");
     const [id, setId] = useState(null);
     const [status, setStatus] = useState(false);
+    const [data, setData] = useLocalStorage(todos);
 
     function handleEdit(index, title, status) {
         setId(index);
@@ -18,6 +20,9 @@ function Todo() {
         setStatus(status);
     }
 
+    useEffect(() => {
+        setData(todos);
+    }, [todos])
 
     return (
         <div className="w-full h-screen flex flex-col justify-center items-center gap-4">
@@ -32,7 +37,7 @@ function Todo() {
             </div>
 
             <ul className="w-[30rem] h-[20rem] border-2 border-orange-200 rounded-lg p-3">
-                {todos.map((el, i) => {
+                {data.map((el, i) => {
                     return (
                         <li className='w-full text-lg flex justify-between items-center' key={i}>
                             <span>{el.title} - {el.status ? "completed" : "incomplete"}</span>
