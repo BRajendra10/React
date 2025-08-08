@@ -37,7 +37,7 @@ function Todo() {
                         <li className='w-full text-lg flex justify-between items-center' key={i}>
                             <span>{el.title} - {el.status ? "completed" : "incomplete"}</span>
                             <div className="flex gap-2">
-                                <button className="text-stone-500 hover:text-stone-950 p-1 rounded-full" onClick={() => handleEdit(i, el.title, true)}><FaCheck /></button>
+                                <button className="text-stone-500 hover:text-stone-950 p-1 rounded-full" onClick={() => dispatch(update({id:i, title:el.title, status:true}))}><FaCheck /></button>
                                 <button className="text-stone-500 hover:text-stone-950 p-1 rounded-full" onClick={() => dispatch(remove(i))}><MdDelete /></button>
                                 <button className="text-stone-500 hover:text-stone-950 p-1 rounded-full" onClick={() => handleEdit(i, el.title, false)}><MdModeEditOutline /></button>
                             </div>
