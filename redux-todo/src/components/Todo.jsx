@@ -21,7 +21,7 @@ function Todo() {
 
     return (
         <div className="w-full h-screen flex flex-col justify-center items-center gap-4">
-            <h1 className="text-4xl font-semibold my-8">Todo's</h1>
+            <h1 className="text-3xl font-semibold uppercase my-8">Todo app</h1>
 
             <div className="w-[30rem] h-auto grid grid-cols-12 bg-gray-200 rounded-full">
                 <input type="text" className="col-start-1 col-end-10 rounded-full outline-0 py-3 px-5" value={title} onChange={(e) => setTile(e.target.value)} />
