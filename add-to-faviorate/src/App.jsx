@@ -1,10 +1,14 @@
 import './App.css'
+import Navbar from './components/Navbar'
+import AllRoutes from './routes/AllRoutes'
 
 function App() {
 
   return (
-    <div className="w-full h-screen flex justify-center items-center">
-      <h1>Add to faviorate system</h1>
+    <div className="w-full h-screen">
+      <Navbar />
+      
+      <AllRoutes />
     </div>
   )
 }
