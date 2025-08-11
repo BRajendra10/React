@@ -13,7 +13,7 @@ function ProductCard({ id, title, description, price, image }) {
 
                 <div className="flex gap-3 row-start-10 row-end-13">
                     <button className="border px-5 rounded-full hover:bg-stone-950 hover:text-stone-50 duration-700">add to bag</button>
-                    <button className="border px-5 rounded-full hover:bg-orange-300 hover:text-orange-50 duration-700">Buy now</button>
+                    <button className="border border-orange-300 px-5 rounded-full hover:bg-orange-300 hover:text-orange-50 duration-700">Buy now</button>
                 </div>
             </div>
         </div>
